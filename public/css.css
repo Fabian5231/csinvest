@@ -1,0 +1,88 @@
+/* Allgemeines Layout */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Titel */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #00ffcc;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.6);
+}
+
+/* Item-Container */
+.item {
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover-Effekt */
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 255, 204, 0.3);
+}
+
+/* Item-Titel */
+.item h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-align: left;
+  margin-right: 50px;
+}
+
+/* Linke Box mit Preisen */
+#itembox {
+  flex: 1;
+}
+
+/* Rechts: Anzahl + Gesamtwert */
+.item p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+/* Wichtige Werte hervorheben */
+.item strong {
+  color: #00ffcc;
+}
+
+#item-count {
+  align-self: center;
+  margin-right: 50px;
+  font-weight: bold;
+  color: #fdb446;
+}
+
+/* Gesamtwert extra hervorheben */
+.item p:last-child {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffcc00;
+  align-self: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .item h2 {
+    margin-bottom: 15px;
+  }
+}
